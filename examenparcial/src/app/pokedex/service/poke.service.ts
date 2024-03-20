@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {PokedexResponde} from '../interface/pokedexresponde'
+import {PokeApiResponse} from '../interface/pokemon'
 import { Observable } from 'rxjs';
 
 
@@ -13,8 +13,8 @@ export class PokeService {
 
   constructor(private http: HttpClient) { }
 
-  getpokemon(): Observable<PokedexResponde[]>{
-    return this.http.get<PokedexResponde[]>(this.api);
+  getpokemon(): Observable<PokeApiResponse[]>{
+    return this.http.get<PokeApiResponse[]>(this.api);
   }
 
 }

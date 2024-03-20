@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PokedexResponde } from '../interface/pokedexresponde';
+import { Pokemon } from '../interface/pokemon';
 import { PokeService } from '../service/poke.service'
 
 
@@ -37,7 +37,7 @@ import { CommonModule } from '@angular/common';
 export class PokedexPageComponent implements OnInit {
   
 
-  pokemonDatos: PokedexResponde | null = null;
+  pokemonDatos: Pokemon [] = [];
   
   
 
@@ -48,9 +48,9 @@ export class PokedexPageComponent implements OnInit {
   }
 
   getpokemondatos(){
-    this.pokeService.getpokemon().subscribe(dato => {
-      this.pokemonDatos?.results;
-      console.log(this.pokemonDatos?.results); 
+    this.pokeService.getpokemon().subscribe(response => {
+      this.pokemonDatos = response.reseults;
+      
       
     })
   }
