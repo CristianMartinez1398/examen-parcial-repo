@@ -7,13 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-  <input style="width: 400px;" [value]="mensajeUbicacion" readonly>
+  <h6>{{mensajeUbicacion}}</h6>
+  
   <div >
     <ion-button size="default">
       <ion-icon src="assets/icon/image-regular.svg"></ion-icon>
     </ion-button>
     <ion-button size="default" (click)="obtenerUbicacion()">
+      
       <ion-icon src="assets/icon/location-dot-solid.svg"></ion-icon>
     </ion-button>
   </div>
