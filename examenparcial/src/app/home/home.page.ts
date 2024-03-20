@@ -25,7 +25,7 @@ export class HomePage {
       const latitud = position.coords.latitude;
       const longitud = position.coords.longitude;
       
-      this.mensajeUbicacion = `Latitud: ${latitud}, Longitud: ${longitud}`;
+      this.mensajeUbicacion = `Mi posición actual es (Latitud: ${latitud}, Longitud: ${longitud})`;
     } catch (error) {
       console.error('Error al obtener la ubicación: ', error);
       
