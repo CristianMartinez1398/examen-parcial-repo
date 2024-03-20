@@ -49,7 +49,7 @@ export class PokedexPageComponent implements OnInit {
 
   getpokemondatos(){
     this.pokeService.getpokemon().subscribe(response => {
-      this.pokemonDatos = response.reseults;
+      this.pokemonDatos = response.results;
       
       
     })
